@@ -1,4 +1,4 @@
-# 🚨 Incident Triage Copilot (MCP-Based)
+# 🚨 Incident Triage Agent Copilot (MCP-Based)
 
 A production-grade, chat-based SRE/DevOps triage assistant built on the
 **Model Context Protocol (MCP)**.
