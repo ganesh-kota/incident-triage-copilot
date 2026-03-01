@@ -1,0 +1,62 @@
+[
+  {
+    "alert_id": "ALT-001",
+    "title": "CRITICAL: payment-service error rate > 5%",
+    "description": "Payment-service error rate has exceeded 5% threshold. Current: 12.3%. Triggered at 2026-02-28T10:14:00Z.",
+    "service": "payment-service",
+    "severity": "SEV1",
+    "environment": "production",
+    "source": "prometheus-alertmanager",
+    "triggered_at": "2026-02-28T10:14:00Z",
+    "labels": {
+      "team": "payments",
+      "tier": "critical",
+      "alert_rule": "HighErrorRate5Percent"
+    }
+  },
+  {
+    "alert_id": "ALT-002",
+    "title": "WARNING: payment-service p99 latency > 2000ms",
+    "description": "Payment-service p99 latency is 5000ms (threshold: 2000ms). Started increasing at 2026-02-28T10:10:00Z.",
+    "service": "payment-service",
+    "severity": "SEV2",
+    "environment": "production",
+    "source": "prometheus-alertmanager",
+    "triggered_at": "2026-02-28T10:12:00Z",
+    "labels": {
+      "team": "payments",
+      "tier": "critical",
+      "alert_rule": "HighLatencyP99"
+    }
+  },
+  {
+    "alert_id": "ALT-003",
+    "title": "CRITICAL: auth-service OOMKilled",
+    "description": "auth-service container was OOMKilled. Memory limit: 512MB. Restart count: 3 in last hour.",
+    "service": "auth-service",
+    "severity": "SEV2",
+    "environment": "production",
+    "source": "kubernetes-events",
+    "triggered_at": "2026-02-28T09:33:00Z",
+    "labels": {
+      "team": "identity",
+      "tier": "critical",
+      "alert_rule": "ContainerOOMKilled"
+    }
+  },
+  {
+    "alert_id": "ALT-004",
+    "title": "WARNING: postgres-primary connection refused",
+    "description": "Multiple services reporting ECONNREFUSED to postgres-primary:5432. Affected: payment-service, order-service.",
+    "service": "postgres-primary",
+    "severity": "SEV1",
+    "environment": "production",
+    "source": "synthetic-monitor",
+    "triggered_at": "2026-02-28T10:14:30Z",
+    "labels": {
+      "team": "data-platform",
+      "tier": "infrastructure",
+      "alert_rule": "DatabaseUnreachable"
+    }
+  }
+]

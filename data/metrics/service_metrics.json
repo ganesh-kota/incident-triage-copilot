@@ -1,0 +1,93 @@
+{
+  "payment-service": {
+    "error_rate": [
+      {"timestamp": "2026-02-28T10:00:00Z", "value": 0.2},
+      {"timestamp": "2026-02-28T10:05:00Z", "value": 0.3},
+      {"timestamp": "2026-02-28T10:10:00Z", "value": 1.5},
+      {"timestamp": "2026-02-28T10:12:00Z", "value": 4.8},
+      {"timestamp": "2026-02-28T10:14:00Z", "value": 12.3},
+      {"timestamp": "2026-02-28T10:15:00Z", "value": 18.7},
+      {"timestamp": "2026-02-28T10:16:00Z", "value": 22.1},
+      {"timestamp": "2026-02-28T10:18:00Z", "value": 25.0},
+      {"timestamp": "2026-02-28T10:20:00Z", "value": 15.4}
+    ],
+    "latency_p99_ms": [
+      {"timestamp": "2026-02-28T10:00:00Z", "value": 120},
+      {"timestamp": "2026-02-28T10:05:00Z", "value": 135},
+      {"timestamp": "2026-02-28T10:10:00Z", "value": 450},
+      {"timestamp": "2026-02-28T10:12:00Z", "value": 2100},
+      {"timestamp": "2026-02-28T10:14:00Z", "value": 5000},
+      {"timestamp": "2026-02-28T10:15:00Z", "value": 5000},
+      {"timestamp": "2026-02-28T10:16:00Z", "value": 5000},
+      {"timestamp": "2026-02-28T10:18:00Z", "value": 5000},
+      {"timestamp": "2026-02-28T10:20:00Z", "value": 3200}
+    ],
+    "cpu_percent": [
+      {"timestamp": "2026-02-28T10:00:00Z", "value": 35},
+      {"timestamp": "2026-02-28T10:10:00Z", "value": 42},
+      {"timestamp": "2026-02-28T10:15:00Z", "value": 28},
+      {"timestamp": "2026-02-28T10:20:00Z", "value": 30}
+    ],
+    "memory_mb": [
+      {"timestamp": "2026-02-28T10:00:00Z", "value": 256},
+      {"timestamp": "2026-02-28T10:10:00Z", "value": 260},
+      {"timestamp": "2026-02-28T10:15:00Z", "value": 258},
+      {"timestamp": "2026-02-28T10:20:00Z", "value": 255}
+    ],
+    "active_connections": [
+      {"timestamp": "2026-02-28T10:00:00Z", "value": 45},
+      {"timestamp": "2026-02-28T10:10:00Z", "value": 80},
+      {"timestamp": "2026-02-28T10:12:00Z", "value": 98},
+      {"timestamp": "2026-02-28T10:14:00Z", "value": 100},
+      {"timestamp": "2026-02-28T10:15:00Z", "value": 0},
+      {"timestamp": "2026-02-28T10:16:00Z", "value": 0},
+      {"timestamp": "2026-02-28T10:20:00Z", "value": 12}
+    ]
+  },
+  "auth-service": {
+    "error_rate": [
+      {"timestamp": "2026-02-28T08:00:00Z", "value": 0.1},
+      {"timestamp": "2026-02-28T08:30:00Z", "value": 0.1},
+      {"timestamp": "2026-02-28T09:00:00Z", "value": 0.5},
+      {"timestamp": "2026-02-28T09:15:00Z", "value": 2.1},
+      {"timestamp": "2026-02-28T09:30:00Z", "value": 8.5},
+      {"timestamp": "2026-02-28T09:32:00Z", "value": 15.0},
+      {"timestamp": "2026-02-28T09:33:00Z", "value": 100.0},
+      {"timestamp": "2026-02-28T09:35:00Z", "value": 3.2}
+    ],
+    "memory_mb": [
+      {"timestamp": "2026-02-28T08:00:00Z", "value": 200},
+      {"timestamp": "2026-02-28T08:30:00Z", "value": 256},
+      {"timestamp": "2026-02-28T09:00:00Z", "value": 384},
+      {"timestamp": "2026-02-28T09:15:00Z", "value": 430},
+      {"timestamp": "2026-02-28T09:30:00Z", "value": 480},
+      {"timestamp": "2026-02-28T09:33:00Z", "value": 512},
+      {"timestamp": "2026-02-28T09:35:00Z", "value": 300}
+    ],
+    "gc_pause_ms": [
+      {"timestamp": "2026-02-28T08:00:00Z", "value": 12},
+      {"timestamp": "2026-02-28T09:00:00Z", "value": 85},
+      {"timestamp": "2026-02-28T09:15:00Z", "value": 450},
+      {"timestamp": "2026-02-28T09:30:00Z", "value": 1200},
+      {"timestamp": "2026-02-28T09:31:00Z", "value": 2100}
+    ]
+  },
+  "recent_deployments": [
+    {
+      "service": "payment-service",
+      "version": "v2.3.1",
+      "deployed_at": "2026-02-28T09:55:00Z",
+      "deployed_by": "ci-pipeline",
+      "commit": "a1b2c3d",
+      "change_summary": "Updated retry logic for payment processor"
+    },
+    {
+      "service": "auth-service",
+      "version": "v1.8.0",
+      "deployed_at": "2026-02-27T16:00:00Z",
+      "deployed_by": "ci-pipeline",
+      "commit": "e4f5g6h",
+      "change_summary": "Added session caching layer"
+    }
+  ]
+}
